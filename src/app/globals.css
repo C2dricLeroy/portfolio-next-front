@@ -1,9 +1,36 @@
-* {
+html, body, main, div, ul, h4 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
+  background-color: #F6F6F6;
 }
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Neue Metana", sans-serif;
+}
+
+h1 {
+  font-family: "NeutralFace", Montserrat-Regular, sans-serif;
+}
+h2, h3 {
+  color: #404040;
+  font-family: Montserrat-Regular, sans-serif;
+}
+
+@font-face {
+  font-family: 'Neue Metana';
+  src: url('../../public/fonts/Lora-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'NeutralFace';
+  src: url('../../public/fonts/NeutralFace.otf') format('truetype');
+}
+
+
