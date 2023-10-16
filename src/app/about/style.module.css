@@ -1,0 +1,58 @@
+.content {
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 12px;
+}
+
+.landingPage {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75vh;
+}
+
+.title {
+    font-size: 50px;
+    color: #404040;
+    cursor: pointer;
+}
+
+.title:hover {
+    color: #FF8370;
+}
+
+
+.fadeIn {
+    animation: fadeInAnimation ease 1000ms;
+}
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+    .option {
+        font-size: 26px;
+    }
+
+    .landing-page {
+        flex-direction: column;
+    }
+
+    .title {
+        text-align: center;
+    }
+}
