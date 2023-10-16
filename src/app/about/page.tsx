@@ -2,6 +2,7 @@
 import styles from './style.module.css';
 import Header from "@/components/header/header";
 import {useRouter} from "next/navigation";
+import { motion } from "framer-motion"
 
 export default function About() {
     const router = useRouter()

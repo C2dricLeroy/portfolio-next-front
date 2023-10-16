@@ -22,12 +22,13 @@
     font-size: 50px;
     color: #404040;
     cursor: pointer;
+    transition: color 0.2s, font-size 0.2s;
 }
 
 .title:hover {
     color: #FF8370;
+    font-size: 55px;
 }
-
 
 .fadeIn {
     animation: fadeInAnimation ease 1000ms;
@@ -37,7 +38,6 @@
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
-
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
 
