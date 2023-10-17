@@ -12,7 +12,7 @@ export default function Home() {
                 <div className={styles.textContainer}>
                     <div className={styles.text}>
                         <h1 className={styles.title}>CEDRIC LEROY</h1>
-                        <h2 className={styles.subTitle}>Concepteur Développeur d&apos;applications</h2>
+                        <h2 className={styles.subTitle}>Concepteur Développeur d&apos;applications TypeScript</h2>
                         <p className={styles.paragraph}>
                             Concepteur Développeur formé à la psychologie, je crois en la force des relations humaines
                             pour atteindre la meilleure des solutions digitale.
