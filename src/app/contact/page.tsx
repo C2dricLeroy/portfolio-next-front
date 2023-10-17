@@ -29,19 +29,19 @@ export default function Contact() {
                            rel="noopener noreferrer">
                             <i className={styles.icon}><FaGithub size={52}/></i>
                             <p className={styles.paragraph}>Github</p>
-                            <p className={styles.paragraphLink}>C2dricLeroy</p>
+                            <p className={styles.paragraphLink}><b>C2dricLeroy</b></p>
                         </a>
                         <a className={styles.iconContainer} href="https://www.linkedin.com/in/cdric2leroy/" target="_blank"
                            rel="noopener noreferrer">
                             <i className={styles.icon}><FaLinkedin size={52}/></i>
                             <p className={styles.paragraph}>LinkedIn</p>
-                            <p className={styles.paragraphLink}>cdric2leroy</p>
+                            <p className={styles.paragraphLink}><b>cdric2leroy</b></p>
                         </a>
                         <a className={styles.iconContainer} href="https://twitter.com/Cdric2Leroy" target="_blank"
                            rel="noopener noreferrer">
                             <i className={styles.icon}><FaTwitter size={52}/></i>
                             <p className={styles.paragraph}>Twitter</p>
-                            <p className={styles.paragraphLink}>cdric2leroy</p>
+                            <p className={styles.paragraphLink}><b>cdric2leroy</b></p>
                         </a>
                     </div>
                     <hr className={styles.border}></hr>
@@ -49,7 +49,7 @@ export default function Contact() {
                             <a className={styles.iconContainer} href="mailto:pro.cedricleroy@gmail.com">
                                 <i className={styles.icon}><FaEnvelope size={52}/></i>
                                 <p className={styles.paragraph}>Mail</p>
-                                <p className={styles.paragraphLink}>pro.cedricleroy@gmail.com</p>
+                                <p className={styles.paragraphLink}><b>pro.cedricleroy@gmail.com</b></p>
                             </a>
                         </div>
                 </section>
