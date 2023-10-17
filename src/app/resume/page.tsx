@@ -32,33 +32,34 @@ export default function Resume() {
                         </a>
                     </section>
                 </div>
-                <div className={styles.profilContainer}>
-                        <img className={styles.profilePicture} src="../../../../../../../portfolio-next-front/public/profile.png" alt="profile picture"/>
-                            <h2 className={styles.subTitle}>Cédric Leroy</h2>
-                            <p className={styles.presentationText}>Hello! Je m&apos;appelle <b>Cédric Leroy</b>, j&apos;ai <b>26 ans</b> et j&apos;habite <b>Lille</b>. Depuis toujours j&apos;ai rêvé d&apos;une carrière dans l&apos;informatique. C&apos;est après un parcours non moins passionnant de psychologue que j&apos;ai décidé de me reconvertir. Après un an d&apos;effort et d&apos;apprentissage j&apos;obtiens mon titre CDA. Mon parcours atypique et mes qualités d&apos;analyse et d&apos;expression sont mes forces, alors n&apos;hésitez pas à me contacter! </p>
-                            <div className={styles.profileInformations}>
-                                <div className={styles.profileInformationItem}>
-                                    <p className={styles.paragraph}><b>PROFESSION</b></p>
-                                    <p className="profilInformationItemText">Développeur Web Back-end</p>
-                                </div>
-                                <div className={styles.profileInformationItem}>
-                                    <p className={styles.paragraph}><b>DATE DE NAISSANCE</b></p>
-                                    <p className={styles.profilInformationItemText}>28/03/1997</p>
-                                </div>
-                                <div className={styles.profileInformationItem}>
-                                    <p className={styles.paragraph}><b>TELETRAVAIL</b></p>
-                                    <p className={styles.profilInformationItemText}>Partiel</p>
-                                </div>
-                                <div className={styles.profileInformationItem}>
-                                    <p className={styles.paragraph}><b>VEHICULE</b></p>
-                                    <p className={styles.profilInformationItemText}>Permis B</p>
-                                </div>
-                                <div className={`${styles.profileInformationItem} ${styles.last}`}>
-                                    <p className={styles.paragraph}><b>VILLE</b></p>
-                                    <p className={styles.paragraph}>Lille, Paris</p>
-                                </div>
-                                <a href="/contact" className={styles.contactButton}>Contact</a>
+                <div className={styles.informationContainer}>
+                    <div className={styles.profilContainer}>
+                        <img className={styles.profilePicture} src="/profile.png" alt="profile picture"/>
+                        <h2 className={styles.subTitle}>Cédric Leroy</h2>
+                        <p className={styles.presentationText}>Hello! Je m&apos;appelle <b>Cédric Leroy</b>, j&apos;ai <b>26 ans</b> et j&apos;habite <b>Lille</b>. Depuis toujours j&apos;ai rêvé d&apos;une carrière dans l&apos;informatique. C&apos;est après un parcours non moins passionnant de psychologue que j&apos;ai décidé de me reconvertir. Après un an d&apos;effort et d&apos;apprentissage j&apos;obtiens mon titre CDA. Mon parcours atypique et mes qualités d&apos;analyse et d&apos;expression sont mes forces, alors n&apos;hésitez pas à me contacter! </p>
+                        <div className={styles.profileInformations}>
+                            <div className={styles.profileInformationItem}>
+                                <p className={styles.paragraph}><b>PROFESSION</b></p>
+                                <p className="profilInformationItemText">Développeur Web Back-end</p>
                             </div>
+                            <div className={styles.profileInformationItem}>
+                                <p className={styles.paragraph}><b>DATE DE NAISSANCE</b></p>
+                                <p className={styles.profilInformationItemText}>28/03/1997</p>
+                            </div>
+                            <div className={styles.profileInformationItem}>
+                                <p className={styles.paragraph}><b>TELETRAVAIL</b></p>
+                                <p className={styles.profilInformationItemText}>Partiel</p>
+                            </div>
+                            <div className={styles.profileInformationItem}>
+                                <p className={styles.paragraph}><b>VEHICULE</b></p>
+                                <p className={styles.profilInformationItemText}>Permis B</p>
+                            </div>
+                            <div className={`${styles.profileInformationItem} ${styles.last}`}>
+                                <p className={styles.paragraph}><b>VILLE</b></p>
+                                <p className={styles.paragraph}>Lille, Paris</p>
+                            </div>
+                            <a href="/contact" className={styles.contactButton}>Contact</a>
+                        </div>
                     </div>
                     <div className={styles.experienceContainer}>
                         <div className={styles.experience}>
@@ -76,44 +77,44 @@ export default function Resume() {
                             </div>
                             <p className={styles.experienceDescription}>Spécialisation développement Back-end TypeScript au sein de l&apos;incubateur numérique d&apos;Euratechnologies avec l&apos;organisme 1 formation = 1 job</p>
                             <hr></hr>
-                                <div className={styles.experienceItem}>
-                                    <h3 className={styles.ExperienceItemTitle}>Développeur et C.E.O</h3>
-                                    <div className={styles.experienceDate}>
-                                        <p className={styles.paragraph}>
-                                            <b>Depuis 10/2023</b>
-                                        </p>
-                                        <p className={styles.paragraph}>
-                                            <b>Compunity</b>
-                                        </p>
-                                    </div>
+                            <div className={styles.experienceItem}>
+                                <h3 className={styles.ExperienceItemTitle}>Développeur et C.E.O</h3>
+                                <div className={styles.experienceDate}>
+                                    <p className={styles.paragraph}>
+                                        <b>Depuis 10/2023</b>
+                                    </p>
+                                    <p className={styles.paragraph}>
+                                        <b>Compunity</b>
+                                    </p>
                                 </div>
-                                <p className={styles.experienceDescription}>Projet professionnel annexe. C.E.O. de la S.A.S NeRoBeCeBa, entreprise de 3 développeurs spécialisée dans la vente et la configuration de serveurs Discord</p>
+                            </div>
+                            <p className={styles.experienceDescription}>Projet professionnel annexe. C.E.O. de la S.A.S NeRoBeCeBa, entreprise de 3 développeurs spécialisée dans la vente et la configuration de serveurs Discord</p>
                             <hr></hr>
-                                    <div className={styles.experienceItem}>
-                                        <h3 className={styles.ExperienceItemTitle}>Développeur PHP & Node.js</h3>
-                                        <div className={styles.experienceDate}>
-                                            <p className={styles.paragraph}>
-                                                <b>03/2023-06/2023 -</b>
-                                            </p>
-                                            <p className={styles.paragraph}>
-                                                <b>Psylexia</b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <p className={styles.experienceDescription}>Première expérience PHP sur une application existante, puis mise en place d&apos;une stratégie KPI à l&apos;aide d&apos;un serveur annexe node.js (Nest.js). Développement d&apos;une interface admin avec affichage des informations (Next.js)</p>
+                            <div className={styles.experienceItem}>
+                                <h3 className={styles.ExperienceItemTitle}>Développeur PHP & Node.js</h3>
+                                <div className={styles.experienceDate}>
+                                    <p className={styles.paragraph}>
+                                        <b>03/2023-06/2023 -</b>
+                                    </p>
+                                    <p className={styles.paragraph}>
+                                        <b>Psylexia</b>
+                                    </p>
+                                </div>
+                            </div>
+                            <p className={styles.experienceDescription}>Première expérience PHP sur une application existante, puis mise en place d&apos;une stratégie KPI à l&apos;aide d&apos;un serveur annexe node.js (Nest.js). Développement d&apos;une interface admin avec affichage des informations (Next.js)</p>
                             <hr></hr>
-                                        <div className={styles.experienceItem}>
-                                            <h3 className={styles.ExperienceItemTitle}>Psychologue Clinicien</h3>
-                                            <div className={styles.experienceDate}>
-                                                <p className={styles.paragraph}>
-                                                    <b>09/2021-10/2022 -</b>
-                                                </p>
-                                                <p className={styles.paragraph}>
-                                                    <b>Korian & Fondation Partage et Vie</b>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <p className={styles.experienceDescription}>Psychologue clinicien pour les groupes Korian et Fondation Partage&Vie: entretiens cliniques patients et familles, formations à destination des soignants, stimulations cognitives</p>
+                            <div className={styles.experienceItem}>
+                                <h3 className={styles.ExperienceItemTitle}>Psychologue Clinicien</h3>
+                                <div className={styles.experienceDate}>
+                                    <p className={styles.paragraph}>
+                                        <b>09/2021-10/2022 -</b>
+                                    </p>
+                                    <p className={styles.paragraph}>
+                                        <b>Korian & Fondation Partage et Vie</b>
+                                    </p>
+                                </div>
+                            </div>
+                            <p className={styles.experienceDescription}>Psychologue clinicien pour les groupes Korian et Fondation Partage&Vie: entretiens cliniques patients et familles, formations à destination des soignants, stimulations cognitives</p>
                         </div>
                         <div className={styles.educationSkillsContainer}>
                             <div className={`${styles.experienceContainer} ${styles.educationContainer}`}>
@@ -133,18 +134,18 @@ export default function Resume() {
                                     <p className={styles.experienceDescription}>Conception, Développement et Sécurisation d&apos;Applications. Projets <a className={styles.experienceDescription} href="/projects">Discord Simplon et Groovz</a></p>
                                 </div>
                                 <hr></hr>
-                                    <div className={styles.experienceItem}>
-                                        <h3 className={styles.ExperienceItemTitle}>Master 2 Psychologie</h3>
-                                        <div className={styles.experienceDate}>
-                                            <p className={styles.paragraph}>
-                                                <b>09/2022 - </b>
-                                            </p>
-                                            <p className={styles.paragraph}>
-                                                <b>Université de Lille</b>
-                                            </p>
-                                        </div>
+                                <div className={styles.experienceItem}>
+                                    <h3 className={styles.ExperienceItemTitle}>Master 2 Psychologie</h3>
+                                    <div className={styles.experienceDate}>
+                                        <p className={styles.paragraph}>
+                                            <b>09/2022 - </b>
+                                        </p>
+                                        <p className={styles.paragraph}>
+                                            <b>Université de Lille</b>
+                                        </p>
                                     </div>
-                                    <p className={styles.experienceDescription}>Obtention du Master PCPA de Lille mention Très Bien</p>
+                                </div>
+                                <p className={styles.experienceDescription}>Obtention du Master PCPA de Lille mention Très Bien</p>
                             </div>
                             <div className={styles.hobbyContainer}>
                                 <div className={styles.hobby}>
@@ -185,6 +186,8 @@ export default function Resume() {
                             </div>
                         </div>
                     </div>
+                </div>
+
             </div>
         </div>
     );
