@@ -1,8 +1,17 @@
+"use client";
 import styles from './style.module.css';
 import Header from "@/components/header/header";
+import {useState} from "react";
 import {FaEnvelope, FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
 
 export default function Contact() {
+    const [hover, setHover] = useState(false);
+
+
+    function handleHover() {
+        setHover(!hover);
+    }
+
     return (
         <main className={styles.page}>
             <div className={styles.header}>
@@ -16,27 +25,31 @@ export default function Contact() {
                 </div>
                 <section className={styles.socialLink}>
                     <div className={styles.links}>
-                        <a className={styles.icon} href="https://github.com/C2dricLeroy" target="_blank"
+                        <a className={styles.iconContainer} href="https://github.com/C2dricLeroy" target="_blank"
                            rel="noopener noreferrer">
-                            <p className={styles.paragraph}> Github :</p>
-                            <i className={styles.ml2}><FaGithub size={32}/></i>
+                            <i className={styles.icon}><FaGithub size={52}/></i>
+                            <p className={styles.paragraph}>Github</p>
+                            <p className={styles.paragraphLink}>C2dricLeroy</p>
                         </a>
-                        <a className={styles.icon} href="https://www.linkedin.com/in/cdric2leroy/" target="_blank"
+                        <a className={styles.iconContainer} href="https://www.linkedin.com/in/cdric2leroy/" target="_blank"
                            rel="noopener noreferrer">
-                            <p className={styles.paragraph}>LinkedIn :</p>
-                            <i className={styles.ml2}><FaLinkedin size={32}/></i>
+                            <i className={styles.icon}><FaLinkedin size={52}/></i>
+                            <p className={styles.paragraph}>LinkedIn</p>
+                            <p className={styles.paragraphLink}>cdric2leroy</p>
                         </a>
-                        <a className={styles.icon} href="https://twitter.com/Cdric2Leroy" target="_blank"
+                        <a className={styles.iconContainer} href="https://twitter.com/Cdric2Leroy" target="_blank"
                            rel="noopener noreferrer">
-                            <p className={styles.paragraph}>Twitter :</p>
-                            <i className={styles.ml2}><FaTwitter size={32}/></i>
+                            <i className={styles.icon}><FaTwitter size={52}/></i>
+                            <p className={styles.paragraph}>Twitter</p>
+                            <p className={styles.paragraphLink}>cdric2leroy</p>
                         </a>
                     </div>
                     <hr className={styles.border}></hr>
                         <div className={styles.mail}>
-                            <a className={styles.icon} href="mailto:pro.cedricleroy@gmail.com">
-                                <p className={styles.paragraph}>Mail :</p>
-                                <i className={styles.ml2}><FaEnvelope size={32}/></i>
+                            <a className={styles.iconContainer} href="mailto:pro.cedricleroy@gmail.com">
+                                <i className={styles.icon}><FaEnvelope size={52}/></i>
+                                <p className={styles.paragraph}>Mail</p>
+                                <p className={styles.paragraphLink}>pro.cedricleroy@gmail.com</p>
                             </a>
                         </div>
                 </section>
