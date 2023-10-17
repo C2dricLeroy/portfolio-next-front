@@ -1,0 +1,221 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactSection {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    width: 100%;
+    margin-top: 75px;
+}
+
+.title {
+    font-family: "Montserrat-Regular", "Helvetica Neue", "Helvetica", "sans-serif";
+    font-weight: bold;
+    color: #404040;
+    font-size: 52px;
+}
+
+.paragraph {
+    color: #404040;
+    font-size: 24px;
+}
+
+.socialLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    text-decoration: none;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #404040;
+    align-items: center;
+    margin: 20px
+}
+
+.icon:hover {
+    color: #FF8370;
+}
+
+.ml2 {
+    margin-left: 20px;
+}
+
+.border {
+    border: 1px solid grey
+}
+
+.icon p {
+    text-decoration: underline;
+}
+
+.links {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.formGroup {
+    --width-of-input: 500px;
+    --border-height: 1px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: rgb(254,137,112);
+    --input-hovered-color: rgb(254,137,112, 0.05);
+    position: relative;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+    align-items: center;
+    width: var(--width-of-input);
+}
+
+.input {
+    color: #171717;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+}
+
+.inputBorder {
+    position: absolute;
+    background: var(--border-after-color);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+/* Hover on Input */
+.input:hover {
+    background: var(--input-hovered-color);
+}
+
+.input:focus {
+    outline: none;
+}
+/* here is code of animated border */
+.input:focus ~ .inputBorder {
+    width: 100%;
+}
+/* === if you want to do animated border on typing === */
+/* remove input:focus code and uncomment below code */
+/* input:valid ~ .input-border{
+  width: 100%;
+} */
+
+.label {
+    color: #404040;
+}
+
+.message {
+    height: 15vh;
+}
+
+.btnSubmit {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: #171717;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+.btnSubmit:disabled {
+    pointer-events: none;
+}
+
+.btnSubmit:hover {
+    color: #fff;
+    background-color: #18575A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.btnSubmit:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .title {
+        font-size: 40px;
+    }
+    .paragraph {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .title {
+        font-size: 30px;
+    }
+    .paragraph {
+        font-size: 16px;
+    }
+    .text{
+        text-align:center;
+    }
+    .input, .textarea {
+        min-width: 300px;
+        width: 30vw;
+        height: 5vh;
+        border-radius: 15px;
+        background-color: #E9E9E9;
+        border: none;
+        padding: 5px;
+    }
+}
