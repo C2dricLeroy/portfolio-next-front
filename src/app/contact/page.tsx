@@ -41,7 +41,7 @@ export default function Contact() {
                         </div>
                 </section>
                 <hr></hr>
-                    <p>Ou via ce formulaire de contact : </p>
+                    <p className={styles.paragraph}>Ou via ce formulaire de contact : </p>
                     <form className={styles.contactForm}>
                         <div className={styles.formGroup}>
                             <label className={styles.label} htmlFor="name">Nom</label>
