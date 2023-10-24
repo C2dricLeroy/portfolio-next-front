@@ -1,0 +1,327 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    font-family: Montserrat-Regular, sans-serif;
+    color:#404040;
+    font-size: 50px;
+}
+.socialLink {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.icon {
+    color: #404040;
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.icon:hover {
+    color: #FF8370;
+}
+.container {
+    margin-top: 6vh;
+    margin-left: 12%;
+    margin-right: 12%;
+    max-width: 80vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titleContainer {
+    position: relative;
+    display: flex;
+}
+.informationContainer {
+    display: flex;
+    flex-direction: row;
+}
+.profilContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 25%;
+    margin: 20px;
+    text-align: justify;
+}
+.contactButton {
+    width: 100%;
+    border: 2px solid #404040;
+    text-align: center;
+    padding: 5px;
+    margin-top: 15vh;
+    color: #404040;
+}
+.contactButton:hover {
+    cursor: pointer;
+    background-color: rgba(255,131,112, 0.1);
+}
+.profilePicture {
+    width: 90%;
+    margin: 0 auto 20px;
+    height: auto;
+    border-radius: 50%;
+}
+.presentationText {
+    margin-top: 1vh;
+    padding: 10px;
+}
+.profileInformations {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+.profileInformationItem {
+    display: flex;
+    padding: 7px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 2px solid #404040;
+    text-align: right;
+}
+.last {
+    border-bottom: 2px solid #404040;
+}
+.subTitle {
+    font-family: Montserrat-Regular, sans-serif;
+    color:#404040;
+    font-size: 36px;
+    margin: 0;
+}
+
+.ExperienceItemTitle {
+    font-family: Montserrat-Regular, sans-serif;
+    color:#404040;
+    font-size: 30px;
+}
+.educationContainer {
+    width: 75%;
+}
+.paragraph, .presentationText {
+    font-size: 20px
+}
+
+.unorderedList {
+    padding: 2vh;
+    list-style-type: none;
+}
+.experienceTitle {
+    text-align: right;
+    border-bottom: 1px solid #404040;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.experienceContainer {
+    padding: 2vh;
+    justify-content: space-between;
+}
+.experienceItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.experienceDate {
+    text-align: right;
+}
+.experienceDescription {
+    padding-left: 10px;
+    color: #6a6a6a;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.pink {
+    color: #FF8370;
+    padding-bottom: 5px
+}
+
+.educationSkillsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.experience > :last-child {
+    border: none;
+}
+
+.hobbyTitle {
+    text-align: right;
+    border-bottom: 1px solid #404040;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.hobbyList {
+    padding: 5px;
+}
+.skillsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2vh;
+}
+.skillsTitle {
+    text-align: right;
+    border-bottom: 1px solid #404040;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.skills, .hobbyContainer {
+    padding: 2vh;
+}
+.technologiesContainer {
+    width : 75%;
+    padding: 2vh;
+}
+.cards > :nth-child(2), .skills >  :nth-child(2), .hobby >  :nth-child(2), .education > :nth-child(2), .experience > :nth-child(2)   {
+    border-top: 3px solid #404040;
+}
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: #404040;
+    color: #F6F6F6;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 15px;
+}
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .profileInformationItem {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .educationSkillsContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .hobbyContainer, .education {
+        width: 100%;
+    }
+    .profilePicture {
+        width: 50%;
+    }
+    .profilContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        margin: 20px;
+        text-align: justify;
+    }
+    .informationContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contactButton {
+        margin-top: 5vh;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%
+    }
+    .titleContainer {
+        flex-direction: column;
+    }
+    .informationContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .profilePicture {
+        width: 50%;
+    }
+    .profilContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        margin: 20px;
+        text-align: justify;
+    }
+    .profileInformationItem {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .profilInformationItemText {
+        text-align: right;
+        display: flex;
+        align-items: center;
+    }
+    .socialLink {
+        position: static;
+        margin: auto;
+    }
+    .experienceTitle {
+        width: 100%;
+        text-align: center;
+    }
+    .experienceContainer {
+        padding: 0;
+        width: 100%;
+    }
+    .hobbyTitle, .skillsTitle, .experienceDate, .experienceItem, .title {
+        text-align: center;
+    }
+    .education {
+        max-width: 100%;
+        width: 100%;
+    }
+    .educationSkillsContainer {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .experienceDescription {
+        text-align: justify;
+    }
+    .hobbyContainer, .skills, .technologiesContainer {
+        width: 100%;
+    }
+    .skillsContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contactButton {
+        margin-top: 3vh;
+    }
+}
