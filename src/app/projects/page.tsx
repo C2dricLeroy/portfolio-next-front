@@ -10,11 +10,11 @@ export default function Projects() {
             <div className={styles.header}>
                 <Header></Header>
             </div>
-            <h1>Mes projets</h1>
+            <h1 className={styles.title}>Mes projets</h1>
             <div className={styles.cardContainer}>
                 {/*{projects.map((project, index) => (
                     <div key={index} className={styles.card}>
-                        <h2 className={styles.cardContainer>{project.Name}</h2>
+                        <h2 className={styles.subtitle>{project.Name}</h2>
                         <div className={styles.dateContainer}>
                             {project.DateDebut && (
                                 <div className={styles.date}>
