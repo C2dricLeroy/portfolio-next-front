@@ -48,5 +48,6 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /app
+            cd ..
+            cd /home/app
             pm2 start npm --name "my-app" -- start
