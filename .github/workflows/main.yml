@@ -39,7 +39,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           source: .next/
-          target: /home/app
+          target: /root/app
 
       - name: Execute commands on the server
         uses: appleboy/ssh-action@master
@@ -48,6 +48,5 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd ..
-            cd /home/app
+            cd /root/app
             pm2 start npm --name "my-app" -- start
