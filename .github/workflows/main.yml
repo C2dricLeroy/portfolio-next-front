@@ -39,7 +39,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           source: .next/
-          target: /root/app
+          target: /app
 
       - name: Execute commands on the server
         uses: appleboy/ssh-action@master
