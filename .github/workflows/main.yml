@@ -38,7 +38,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          source: .next/
+          source: .
           target: /app
 
       - name: Execute commands on the server
@@ -49,4 +49,4 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /app
-            /root/.nvm/versions/node/v20.8.1/bin/node /root/.nvm/versions/node/v20.8.1/bin/pm2 start npm --name "my-app" -- start
+            pm2 start npm --name "my-app" -- start
