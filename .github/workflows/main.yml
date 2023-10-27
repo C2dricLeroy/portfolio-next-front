@@ -49,4 +49,4 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /app
-            sudo pm2 start npm --name "my-app" -- start
+            /root/.nvm/versions/node/v20.8.1/bin/pm2 start npm --name "my-app" -- start
