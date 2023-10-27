@@ -49,4 +49,4 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /root/app
-            pm2 start npm --name "my-app" -- start
+            sudo pm2 start npm --name "my-app" -- start
