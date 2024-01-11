@@ -16,8 +16,7 @@ export default function Projects() {
     const getProjects = async () => {
         try {
             const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-            const response = await axios.get('http://localhost:3500/projects/getAll')
-            console.log(response);
+            const response = await axios.get(apiUrl + '/projects/getAll')
             return response.data;
         } catch (error) {
             console.error(error);
@@ -26,7 +25,6 @@ export default function Projects() {
 
     useEffect(() => {
         getProjects().then((data) => {
-            console.log(data);
             setProjects(data);
         })
     }, [])
