@@ -88,7 +88,7 @@ export default function Resume() {
                                     </p>
                                 </div>
                             </div>
-                            <p className={styles.experienceDescription}>Projet professionnel annexe. C.E.O. de la S.A.S NeRoBeCeBa, entreprise de 3 développeurs spécialisée dans la vente et la configuration de serveurs Discord</p>
+                            <p className={styles.experienceDescription}>Projet annexe. C.E.O. de la S.A.S NeRoBeCeBa, entreprise de 3 développeurs spécialisée dans la vente et la configuration de serveurs Discord</p>
                             <hr></hr>
                             <div className={styles.experienceItem}>
                                 <h3 className={styles.ExperienceItemTitle}>Développeur PHP & Node.js</h3>
