@@ -1,17 +1,22 @@
 "use client"
 
 import styles from './style.module.css';
-import {HiRadio} from "react-icons/hi2";
 import Header from "@/components/header/header";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {Project} from "@/types/projectTypes";
+import {FaGithub, FaLink} from "react-icons/fa";
+import { Technology } from "@/types/Technology";
 
 
+function formatDate(dateString: string) {
+    const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString('fr-FR', options);
+}
 
 export default function Projects() {
 
-    const [projects, setProjects] = useState([]);
+    const [projects,setProjects] = useState([]);
 
     const getProjects = async () => {
         try {
@@ -29,8 +34,7 @@ export default function Projects() {
         })
     }, [])
 
-
-
+    console.log(projects[0])
 
     return (
         <div className={styles.page}>
@@ -42,36 +46,56 @@ export default function Projects() {
                 {projects.map((project: Project, index) => (
                     <div key={project.project_id} className={styles.card}>
                         <h2 className={styles.subtitle}>{project.project_name}</h2>
-                        <div className={styles.dateContainer}>
+                        <div className={styles.Container}>
                             {project.project_date_begin && (
-                                <div className={styles.date}>
+                                <div className={styles.dateContainer}>
                                     <h3>Date Début:</h3>
-                                    <p className={styles.date}>{project.project_date_begin}</p>
+                                    <p className={styles.date}>{formatDate(project.project_date_begin)}</p>
                                 </div>
                             )}
-                            {project.project_date_end && (
-                                <div className={styles.date}>
+                            {project.project_date_end ? (
+                                <div className={styles.dateContainer}>
                                     <h3>Date Fin:</h3>
-                                    <p className={styles.date}>{project.project_date_end}</p>
+                                    <p className={styles.date}>{formatDate(project.project_date_end)}</p>
+                                </div>
+                            ) : null}
+                            {project.project_status.status_name && (
+                                <div className={styles.dateContainer}>
+                                    <h3>Statut:</h3>
+                                    <p className={styles.date}>{project.project_status.status_name}</p>
                                 </div>
                             )}
                         </div>
-                        <p className={styles.description}>{project.project_description}</p>
-                        {project.project_github && (
-                            <div className={styles.link}>
-                                <a href={project.project_github}>Github</a>
+
+                        {project.ProjectTechnology && project.ProjectTechnology.map((projectTechnology: Technology) => (
+                            <div className={styles.technologyContainer} key={projectTechnology.technology_id}>
+                                <p className={styles.technology}>
+                                    {projectTechnology.technology_name}
+                                </p>
                             </div>
+
+                        ))}
+
+
+                        {project.project_description && (
+                            <p className={styles.date}>{project.project_description}</p>
                         )}
-                        {project.project_url && (
-                            <div className={styles.link}>
-                                <a href={project.project_url}>URL</a>
-                            </div>
+
+                        <div className={styles.link}>
+                            {project.project_github && (
+                                <a className={styles.icon} href={project.project_github}
+                                   target="_blank" rel="noopener noreferrer">
+                                    <i className="fa fa-2x fa-github"><FaGithub size={32}></FaGithub></i>
+                                </a>
+                            )}
+                            {project.project_url && (
+                                <a className={styles.icon} href={project.project_url}
+                                   target="_blank" rel="noopener noreferrer">
+                                    <i className="fa fa-2x fa-link"><FaLink size={32}/></i>
+                                </a>
                         )}
-                        {project.project_status.status_name && (
-                            <div className={styles.link}>
-                                <p>Statut: {project.project_status.status_name}</p>
-                            </div>
-                        )}
+                        </div>
+
                     </div>
                 ))}
             </div>
