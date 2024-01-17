@@ -63,6 +63,9 @@
     .title {
         font-size: 26px;
     }
+    .title:hover {
+        font-size: 30px;
+    }
 
     .landingPage {
         flex-direction: column;
