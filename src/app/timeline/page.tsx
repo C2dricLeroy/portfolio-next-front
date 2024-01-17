@@ -1,6 +1,9 @@
-import React from 'react';
+"use client"
+import React, { useEffect } from 'react';
 import styles from './style.module.css';
 import Header from "@/components/header/header";
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 export default function Timeline() {
 
@@ -17,6 +20,12 @@ export default function Timeline() {
         { year: "09/2015", description: "Obtention du baccalauréat Scientifique mention bien"},
     ];
 
+    useEffect(() => {
+        AOS.init({
+            duration : 2000
+        });
+    }, []);
+
     return (
         <main className={styles.main}>
             <div className={styles.header}>
@@ -26,12 +35,17 @@ export default function Timeline() {
             <div className={styles.timeline}>
                 <div className={styles.verticalLine}> </div>
                 {events.map((event, index) => (
-                    <div key={index} className={index % 2 === 0 ? styles.eventLeft : styles.eventRight}>
+                    <div
+                        key={index}
+                        className={index % 2 === 0 ? styles.eventLeft : styles.eventRight}
+                        data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+                    >
                         <h2 className={styles.year}>{event.year}</h2>
-                        <p>{event.description}</p>
+                        <p className={styles.paragraph}>{event.description}</p>
                     </div>
                 ))}
             </div>
         </main>
+
     );
 }

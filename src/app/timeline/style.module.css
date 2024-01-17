@@ -54,3 +54,9 @@
 .year {
     color: #FF8370;
 }
+
+.paragraph {
+    color: #404040;
+    font-size: 24px;
+    font-weight: 500;
+}
