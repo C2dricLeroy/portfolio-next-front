@@ -1,4 +1,4 @@
-FROM 21-bookworm-slim
+FROM 21-alpine-slim
 
 WORKDIR /usr/src/app
 
