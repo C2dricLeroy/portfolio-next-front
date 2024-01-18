@@ -73,6 +73,8 @@
     text-align: center;
     color: #FF8370;
     font-weight: bold;
+    font-size: 36px;
+    margin: 0;
 }
 
 .link {
@@ -92,10 +94,29 @@
     color: #FF8370;
 }
 
-.technology {
+.technologiesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.technologyContainer {
+    display: flex;
+    background-color: black;
+    color: beige;
+    padding: 10px;
     margin: 5px;
-    padding: 5px;
-    color: #FF8370;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.technology {
+    text-align: center;
+    color: #F6F6F6;
 }
 
 

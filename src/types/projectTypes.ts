@@ -1,8 +1,8 @@
 import {Status} from "@/types/statusType";
-import {Technology} from "@/types/Technology";
+import {Technologies} from "@/types/Technologies";
 
 export type Project = {
-    ProjectTechnology: Technology[];
+    ProjectTechnology: Technologies[];
     project_id: number;
     project_name: string;
     project_date_begin: string;

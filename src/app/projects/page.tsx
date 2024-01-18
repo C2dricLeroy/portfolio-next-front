@@ -6,7 +6,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import {Project} from "@/types/projectTypes";
 import {FaGithub, FaLink} from "react-icons/fa";
-import { Technology } from "@/types/Technology";
+import { Technologies } from "@/types/Technologies";
 
 
 function formatDate(dateString: string) {
@@ -67,14 +67,17 @@ export default function Projects() {
                             )}
                         </div>
 
-                        {project.ProjectTechnology && project.ProjectTechnology.map((projectTechnology: Technology) => (
-                            <div className={styles.technologyContainer} key={projectTechnology.technology_id}>
-                                <p className={styles.technology}>
-                                    {projectTechnology.technology_name}
-                                </p>
-                            </div>
+                        <div className={styles.technologiesContainer}>
+                            {project.ProjectTechnology && project.ProjectTechnology.map((projectTechnology: Technologies) => (
+                                <div className={styles.technologyContainer} key={projectTechnology.technology_id}>
+                                    <p className={styles.technology}>
+                                        {projectTechnology.technology.technology_name}
+                                    </p>
+                                </div>
 
-                        ))}
+                            ))}
+                        </div>
+
 
 
                         {project.project_description && (
