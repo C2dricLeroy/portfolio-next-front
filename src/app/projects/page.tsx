@@ -34,8 +34,6 @@ export default function Projects() {
         })
     }, [])
 
-    console.log(projects[0])
-
     return (
         <div className={styles.page}>
             <div className={styles.header}>
@@ -96,7 +94,6 @@ export default function Projects() {
                                 </a>
                         )}
                         </div>
-
                     </div>
                 ))}
             </div>
