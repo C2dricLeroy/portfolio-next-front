@@ -1,4 +1,4 @@
-FROM 21-alpine
+FROM 21-alpine3.18
 
 WORKDIR /usr/src/app
 
