@@ -11,6 +11,7 @@ export type Project = {
     project_github: string;
     project_url: string;
     project_image_path: string;
+    project_summary: string
     status_id: string;
     project_status: Status;
 };

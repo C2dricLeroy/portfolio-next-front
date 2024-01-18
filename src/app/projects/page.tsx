@@ -49,19 +49,19 @@ export default function Projects() {
                         <div className={styles.Container}>
                             {project.project_date_begin && (
                                 <div className={styles.dateContainer}>
-                                    <h3>Date Début:</h3>
+                                    <h3>Date de Début :</h3>
                                     <p className={styles.date}>{formatDate(project.project_date_begin)}</p>
                                 </div>
                             )}
                             {project.project_date_end ? (
                                 <div className={styles.dateContainer}>
-                                    <h3>Date Fin:</h3>
+                                    <h3>Date de Fin :</h3>
                                     <p className={styles.date}>{formatDate(project.project_date_end)}</p>
                                 </div>
                             ) : null}
                             {project.project_status.status_name && (
                                 <div className={styles.dateContainer}>
-                                    <h3>Statut:</h3>
+                                    <h3>Statut :</h3>
                                     <p className={styles.date}>{project.project_status.status_name}</p>
                                 </div>
                             )}
@@ -78,10 +78,8 @@ export default function Projects() {
                             ))}
                         </div>
 
-
-
-                        {project.project_description && (
-                            <p className={styles.date}>{project.project_description}</p>
+                        {project.project_summary && (
+                            <p className={styles.date}>{project.project_summary}</p>
                         )}
 
                         <div className={styles.link}>
