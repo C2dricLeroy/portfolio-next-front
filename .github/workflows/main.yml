@@ -36,4 +36,3 @@ jobs:
             docker rm portfolio-front || true
             docker pull portfolio-front
             docker run -d --name portfolio-front -p 80:3000 portfolio-front
-
