@@ -15,8 +15,8 @@ jobs:
 
       - name: Build and Push Frontend Docker Image
         run: |
-          docker build -t portfolio-front .
           echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+          docker build -t portfolio-front .
           docker push portfolio-front
 
       - name: Execute commands on the server
@@ -26,8 +26,8 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            docker stop your-frontend-container || true
-            docker rm your-frontend-container || true
-            docker pull your-frontend-image
-            docker run -d --name your-frontend-container -p 80:3000 your-frontend-image
+            docker stop portfolio-front || true
+            docker rm portfolio-front || true
+            docker pull portfolio-front
+            docker run -d --name portfolio-front -p 80:3000 portfolio-front
 
