@@ -1,10 +1,7 @@
 .page {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .header {
@@ -19,10 +16,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 80%;
     height: auto;
-
 }
 
 .card {
@@ -31,9 +27,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 350px;
-    height: 100%;
-    max-height: 600px;
-    min-height: 400px;
+    height: auto;
     padding: 15px;
     margin: 30px;
     border-radius: 10px;
@@ -44,20 +38,79 @@
     color: #404040;
     font-size: 52px;
     margin: 75px;
-
 }
 
 .cardTitle {
-    text-align: center;
+    vertical-align: center;
     color: #FF8370;
     font-weight: bold;
 }
 
+.dateContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
 
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
-    .subtitle {
-        text-align: left;
-    }
+.date {
+    margin-left: 7px;
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subtitle {
+    text-align: center;
+    color: #FF8370;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
+}
+
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+.icon {
+    color: #404040;
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.icon:hover {
+    color: #FF8370;
+}
+
+.technologiesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.technologyContainer {
+    display: flex;
+    background-color: black;
+    color: beige;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.technology {
+    text-align: center;
+    color: #F6F6F6;
 }
 
 @media only screen and (max-width: 767px) {
@@ -66,12 +119,27 @@
         text-align: center;
     }
 
-    .card-container {
+    .cardContainer {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+        flex-wrap: nowrap;
     }
 
     .card {
-        max-height: 500px;
+        min-width: 95%;
+    }
+
+    .technology {
+        font-size: 12px;
+    }
+
+    .technologyContainer {
+        width: 80px;
     }
 }
 
