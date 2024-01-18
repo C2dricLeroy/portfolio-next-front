@@ -1,4 +1,4 @@
-FROM 21-alpine-slim
+FROM 21-alpine
 
 WORKDIR /usr/src/app
 
