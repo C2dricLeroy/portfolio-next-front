@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            docker stop u-cms-landing-dev
+            docker stop portfolio-front
             docker system prune -a -f
 
   deploy-landing-page-dev:
