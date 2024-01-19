@@ -34,5 +34,5 @@ jobs:
           script: |
             docker stop portfolio-front || true
             docker rm portfolio-front || true
-            docker pull portfolio-front
+            docker pull portfolio-front:latest
             docker run -d --name portfolio-front -p 80:3000 portfolio-front:latest
