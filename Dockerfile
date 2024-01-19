@@ -1,4 +1,6 @@
-FROM 21-alpine
+FROM alpine:latest
+
+RUN apk add --update nodejs npm
 
 WORKDIR /usr/src/app
 
