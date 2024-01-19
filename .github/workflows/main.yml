@@ -23,7 +23,7 @@ jobs:
         run: |
           sudo docker build -t portfolio-front .
           echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-          docker push portfolio-front
+          docker push cedricleroydev/portfolio-front
 
       - name: Execute commands on the server
         uses: appleboy/ssh-action@master
