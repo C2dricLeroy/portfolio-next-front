@@ -21,7 +21,7 @@ jobs:
 
       - name: Build and Push Frontend Docker Image
         run: |
-          sudo docker build -t portfolio-front .
+          sudo docker build -t cedricleroydev/portfolio-front .
           echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
           docker push cedricleroydev/portfolio-front:latest
 
@@ -32,7 +32,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            docker stop portfolio-front || true
-            docker rm portfolio-front || true
-            docker pull portfolio-front:latest
-            docker run -d --name portfolio-front -p 80:3000 portfolio-front:latest
+            docker stop cedricleroydev/portfolio-front || true
+            docker rm cedricleroydev/portfolio-front || true
+            docker pull cedricleroydev/portfolio-front
+            docker run -d --name cedricleroydev/portfolio-front -p 80:3000 cedricleroydev/portfolio-front
