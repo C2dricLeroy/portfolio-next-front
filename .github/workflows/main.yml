@@ -6,33 +6,60 @@ on:
       - main
 
 jobs:
-  build-and-deploy-frontend:
+  clear-docker-context:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-
-      - name: Build and Push Frontend Docker Image
-        run: |
-          sudo docker build -t cedricleroydev/portfolio-front .
-          echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-          docker push cedricleroydev/portfolio-front:latest
-
-      - name: Execute commands on the server
+      - name: Clear docker context
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            docker stop cedricleroydev/portfolio-front || true
-            docker rm cedricleroydev/portfolio-front || true
-            docker pull cedricleroydev/portfolio-front
-            docker run -d --name cedricleroydev/portfolio-front -p 80:3000 cedricleroydev/portfolio-front
+            docker stop u-cms-landing-dev
+            docker system prune -a -f
+
+  deploy-landing-page-dev:
+    runs-on: ubuntu-latest
+    needs: clear-docker-context
+    if: always()
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Send files to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          source: .
+          target: portfolio-front
+
+      - name: Build API Image
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            cd /${{ secrets.SERVER_USERNAME }}/portfolio-front
+            docker build -f Dockerfile -t portfolio-front .
+
+      - name: Mount Landing page Container
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            docker run -d \
+            --name=u-cms-landing-dev \
+            -e NEXT_PUBLIC_API_URL="${{ secrets.NEXT_PUBLIC_API_URL }}" \
+            -p 3000:3000 \
+            --restart always \
+            portfolio-front
