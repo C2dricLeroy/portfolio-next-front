@@ -20,8 +20,18 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
+            echo "Checking running containers:"
+            docker ps
+            
+            echo "Stopping portfolio-front container (if running):"
             docker stop portfolio-front || true
+            
+            echo "Removing portfolio-front container (if exists):"
+            docker rm portfolio-front || true
+            
+            echo "Cleaning Docker system:"
             docker system prune -a -f
+
 
   deploy-landing-page-dev:
     runs-on: ubuntu-latest
