@@ -68,7 +68,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             docker run -d \
-            --name=u-cms-landing-dev \
+            --name=portfolio-front \
             -e NEXT_PUBLIC_API_URL="${{ secrets.NEXT_PUBLIC_API_URL }}" \
             -p 3000:3000 \
             --restart always \
