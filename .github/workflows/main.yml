@@ -20,8 +20,8 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            docker stop portfolio-front
-            docker system prune -a -f
+            docker stop portfolio-front || true
+            docker system prune -a -f || true
 
   deploy-landing-page-dev:
     runs-on: ubuntu-latest
